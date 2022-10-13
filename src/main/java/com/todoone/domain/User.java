@@ -16,8 +16,9 @@ public class User {
     private String birth;
     private int gender;
     private int allowNotification;
+    private int code;
 
-    public User(int user_id, String name, String email, String password, String birth, int gender, int allowNotification, String nickname) {
+    public User(int user_id, String name, String email, String password, String birth, int gender, int allowNotification, String nickname, int code) {
         this.user_id = user_id;
         this.name = name;
         this.email = email;
@@ -26,6 +27,6 @@ public class User {
         this.birth = birth;
         this.allowNotification = allowNotification;
         this.gender = gender;
-
+        this.code = code;
     }
 }
