@@ -1,6 +1,6 @@
-package com.ch9al9back.service;
+package com.todoone.service;
 
-import com.ch9al9back.domain.User;
+import com.todoone.domain.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Service
 public class JwtService {
-    private String key = "Cjdrn";
+    private String key = "xnendnjs";
 
     public String createJWT(User user) {
         System.out.println("Start building JWT");
@@ -25,8 +25,8 @@ public class JwtService {
 
         Map<String, Object> payloads = new HashMap<>();
         payloads.put("user_id", user.getUser_id());
-        payloads.put("id", user.getId());
-        payloads.put("pw", user.getPw());
+        payloads.put("email", user.getEmail());
+        payloads.put("pw", user.getPassword());
         payloads.put("nickname", user.getNickname());
 
         String accessToken = Base64.getEncoder().encodeToString(key.getBytes());

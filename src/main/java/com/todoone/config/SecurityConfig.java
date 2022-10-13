@@ -1,4 +1,4 @@
-package com.ch9al9back.config;
+package com.todoone.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

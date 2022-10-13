@@ -1,4 +1,4 @@
-package com.ch9al9back;
+package com.todoone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
