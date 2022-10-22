@@ -11,7 +11,7 @@ import java.util.Map;
 @Repository
 @Mapper
 public interface UserRepository {
-    @Insert("insert into user_table values(0, #{name}, #{email}, #{password}, #{birth}, #{gender}, #{allowNotification}, #{nickname})")
+    @Insert("insert into user_table values(0, #{name}, #{email}, #{password}, #{birth}, #{gender}, #{allowNotification}, #{nickname},#{code})")
     void addUser(User user);
 
     // email 중복 검사
@@ -21,4 +21,8 @@ public interface UserRepository {
     // password 꺼내서 비교하려고
     @Select("select password from user_table where email = #{email}")
     String pwCheck(String email);
+
+    // 코드 중복 검사
+    @Select("select * from user_table where code = #{code}")
+    Map<String, Object> findByCode(Integer code);
 }
