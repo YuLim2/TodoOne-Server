@@ -7,7 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
-import java.util.Random;
 
 @Service
 public class AuthService {
@@ -31,7 +30,7 @@ public class AuthService {
         return passwordEncoder.matches(user.getPassword(), cuPw);
     }
 
-    public int makeCode(User user) {
+    public void makeCode(User user) { // 코드 생성
         int code;
         while (true) {
             code = (int) (Math.random() * 99999) + 1;
@@ -39,7 +38,6 @@ public class AuthService {
             if (isCode == null) break;
         }
         user.setCode(code);
-        return code;
     }
 
 }
