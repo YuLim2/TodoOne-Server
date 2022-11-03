@@ -14,16 +14,16 @@ public class Todo {
     private int couple_id;
     private String content;
     private String date;
-    private int completeStatus;
+    private int complete_status;
     private int together;
 
-    public Todo(int todo_id, int user_id, int couple_id, String content, String date, int completeStatus, int together) {
+    public Todo(int todo_id, int user_id, int couple_id, String content, String date, int complete_status, int together) {
         this.todo_id = todo_id;
         this.user_id = user_id;
         this.couple_id = couple_id;
         this.content = content;
         this.date = date;
-        this.completeStatus = completeStatus;
+        this.complete_status = complete_status;
         this.together = together;
     }
 }
